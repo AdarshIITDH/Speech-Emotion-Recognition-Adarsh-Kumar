@@ -22,7 +22,7 @@ def main():
           """
           )
 
-  file = st.file_uploader("Please upload an audio file", type=["wav"])
+  file = st.file_uploader("Upload Your audio file here", type=["wav"])
 
 
   st.set_option('deprecation.showfileUploaderEncoding', False)
@@ -60,10 +60,10 @@ def main():
     return d[ans]
 
   if file is None:
-      st.text("Please upload an audio file")
+      st.text("Upload Your audio file here")
   else:
       predictions = model_predict(file)
-      st.success(f"It seems like you're quite {predictions} today")
+      st.success(f"What happened you are so {predictions} today")
 
 if __name__ == '__main__':
     main()
